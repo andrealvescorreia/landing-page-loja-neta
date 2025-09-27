@@ -26,7 +26,7 @@ export default function NavBar() {
       <button
         type="button"
         className="overlay"
-        aria-label="Fechar menu"
+        aria-hidden="true"
         tabIndex={isOpen ? 0 : -1}
         onClick={() => setIsOpen(false)}
         onKeyDown={e => {
