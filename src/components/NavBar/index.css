@@ -67,9 +67,6 @@
   .navbar ul.open {
     right: 0;
   }
-  .navbar ul.open ~ .overlay {
-    display: block;
-    }
 }
 
 
