@@ -1,4 +1,4 @@
-import './index.css'
+import './style.css'
 import Logo from '../../assets/Logo.svg'
 import Hamburger from '../../assets/hamburger.svg'
 import X from '../../assets/xmark.svg'
