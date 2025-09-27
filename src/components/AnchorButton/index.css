@@ -1,0 +1,26 @@
+.custom-button {
+  background-color: var(--accent-text-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  padding-left: 1rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 3rem;
+  width: fit-content;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+.custom-button:hover {
+  background-color: #df6eb6;
+}
+
+
+
+.custom-button img {
+  width: 1.8rem;
+}
