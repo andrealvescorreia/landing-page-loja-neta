@@ -3,6 +3,7 @@ import FamilyImage from './assets/family.png'
 import Whatsapp from './assets/Whatsapp.svg'
 import Watch from './assets/Watch.svg'
 import './App.css'
+import LogoSlider from './components/LogoSlider'
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
         </div>
         <img src={FamilyImage} alt="Imagem de uma família brasileira sentada em um sofá" />
       </div>
+      <LogoSlider />
     </div>
   )
 }
