@@ -1,5 +1,5 @@
 .navbar {
-  --navbar-height: 4.7rem;
+  --navbar-height: clamp(3rem, calc(5vw + 1rem), 4.7rem);
   position: sticky;
   top: 0;
   left: 0;
