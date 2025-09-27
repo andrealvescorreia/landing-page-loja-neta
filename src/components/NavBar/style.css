@@ -13,6 +13,11 @@
   display: flex;
 }
 
+.navbar a {
+  display: flex;
+  align-items: center;
+}
+
 .navbar img {
   width: clamp(12rem, calc(20vw + 1rem), 22rem);
 }
