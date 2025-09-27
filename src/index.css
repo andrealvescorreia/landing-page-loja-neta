@@ -28,7 +28,6 @@ small {
   color: var(--secondary-text-color);
 }
 
-
 .nunito-bold {
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
@@ -41,4 +40,16 @@ small {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.accent-text {
+  color: var(--accent-text-color);
 }
