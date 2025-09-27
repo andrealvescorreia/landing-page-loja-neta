@@ -1,0 +1,457 @@
+/* Video Player Customizado - Design Minimalista */
+.video-player-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease;
+}
+
+.video-player-container:hover {
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.18);
+}
+
+/* Vídeo principal */
+.video-player {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #000;
+  object-fit: cover;
+}
+
+/* Container fullscreen */
+.video-player-container.fullscreen {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  border-radius: 0;
+  z-index: 9999;
+}
+
+.video-player-container.fullscreen .video-player {
+  object-fit: contain;
+}
+
+/* Overlay de play */
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.play-overlay:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.play-overlay:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: -2px;
+}
+
+.play-button {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.play-overlay:hover .play-button {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+.play-button svg {
+  color: #333;
+  margin-left: 2px; /* Alinhamento visual do ícone de play */
+}
+
+/* Botão de mute/unmute flutuante */
+.floating-mute-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 4;
+  transition: all 0.3s ease;
+}
+
+.floating-mute-button:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+.mute-button-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.floating-mute-button:hover .mute-button-icon {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.floating-mute-button:active .mute-button-icon {
+  transform: scale(0.95);
+}
+
+.mute-button-icon svg {
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+/* Controles do vídeo */
+.video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    transparent 100%
+  );
+  padding: 24px 16px 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+.video-controls.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Barra de progresso */
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: height 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar:hover {
+  height: 6px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: width 0.1s ease;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.progress-bar:hover .progress-fill::after {
+  opacity: 1;
+}
+
+/* Controles inferiores */
+.controls-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.controls-left,
+.controls-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Botões de controle */
+.control-button {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  min-width: 36px;
+  height: 36px;
+}
+
+.control-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.control-button:active {
+  transform: scale(0.95);
+}
+
+.control-button svg {
+  transition: transform 0.2s ease;
+}
+
+/* Slider de volume */
+.volume-slider {
+  display: none;
+  width: 80px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+.volume-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Display de tempo */
+.time-display {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.02em;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Loading indicator */
+.loading-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsividade para vídeos verticais */
+@media (max-width: 768px) {
+  .video-player-container {
+    border-radius: 8px;
+  }
+
+  .play-button {
+    width: 56px;
+    height: 56px;
+  }
+
+  .floating-mute-button {
+    top: 12px;
+    right: 12px;
+  }
+
+  .mute-button-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .mute-button-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .video-controls {
+    padding: 20px 12px 12px;
+  }
+
+  .controls-left,
+  .controls-right {
+    gap: 8px;
+  }
+
+  .control-button {
+    min-width: 32px;
+    height: 32px;
+    padding: 6px;
+  }
+
+  .volume-slider {
+    display: none;
+    width: 60px;
+  }
+
+  .time-display {
+    font-size: 12px;
+  }
+
+  /* Para dispositivos móveis, esconder alguns controles para economizar espaço */
+  .volume-slider {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-player-container {
+    border-radius: 6px;
+  }
+
+  .floating-mute-button {
+    top: 8px;
+    right: 8px;
+  }
+
+  .mute-button-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .mute-button-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .controls-left .time-display {
+    font-size: 11px;
+  }
+}
+
+/* Otimizações para vídeos verticais (9:16, etc.) */
+.video-player-container.vertical {
+  max-width: 400px;
+  aspect-ratio: 9/16;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .video-player-container.vertical {
+    max-width: 100%;
+    max-height: 70vh;
+  }
+}
+
+/* Animações suaves */
+.video-player-container * {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Melhorias de acessibilidade */
+.control-button:focus,
+.progress-bar:focus,
+.volume-slider:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+}
+
+.control-button:focus:not(:focus-visible),
+.progress-bar:focus:not(:focus-visible),
+.volume-slider:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Estados de hover melhorados */
+@media (hover: hover) {
+  .video-player-container:hover .video-controls {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Melhor suporte para telas de alta densidade */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .progress-bar {
+    height: 3px;
+  }
+  
+  .progress-bar:hover {
+    height: 5px;
+  }
+}

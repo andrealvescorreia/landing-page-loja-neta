@@ -1,9 +1,9 @@
 import './index.css'
 import type { ComponentProps } from 'react'
 
-type ButtonProps = ComponentProps<'a'>
+type AnchorProps = ComponentProps<'a'>
 
-export function AnchorButton({ className, ...props }: ButtonProps) {
+export function AnchorButton({ className, ...props }: AnchorProps) {
   return (
     <a
       className='custom-button'
