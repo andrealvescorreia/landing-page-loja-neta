@@ -1,4 +1,4 @@
-.custom-button {
+.anchor-button {
   background-color: var(--accent-text-color);
   color: white;
   border: none;
@@ -15,12 +15,12 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.custom-button:hover {
+.anchor-button:hover {
   background-color: #df6eb6;
 }
 
 
 
-.custom-button img {
+.anchor-button img {
   width: 1.8rem;
 }

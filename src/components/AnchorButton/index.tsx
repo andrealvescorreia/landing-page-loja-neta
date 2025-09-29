@@ -6,7 +6,7 @@ type AnchorProps = ComponentProps<'a'>
 export function AnchorButton({ className, ...props }: AnchorProps) {
   return (
     <a
-      className='custom-button'
+      className='anchor-button'
       {...props}
     />
   )
