@@ -18,7 +18,7 @@ export default function StoreOverview() {
         pauseOnOutOfView={true}
       />
       <div>
-        <h2 className='nunito-bold'>Encontre o que precisa.</h2>
+        <h2>Encontre o que precisa.</h2>
         <p>Roupas para todas as idades, moda íntima, cosméticos, artigos para casa, cama, mesa, banho, brinquedos e muito mais. </p>
         <SecondaryButton>Ver Produtos</SecondaryButton>
       </div>
