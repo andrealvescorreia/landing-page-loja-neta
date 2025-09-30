@@ -1,12 +1,8 @@
 .product-card {
-  width: 16rem;
-  height: 25rem;
   display: flex;
   flex-direction: column;
-  @media (max-width: 1000px) {
-    width: clamp(11.3rem, calc(30dvw + 1rem), 15rem);
-    height: clamp(20rem, calc(60dvw + 1rem), 25rem);
-  }
+  width: clamp(10.5rem, calc(24dvw + 1rem), 18rem);
+  height: clamp(20rem, calc(60dvw + 1rem), 26.5rem);
 }
 
 .product-card p  {

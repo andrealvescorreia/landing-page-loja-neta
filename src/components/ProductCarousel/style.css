@@ -1,5 +1,5 @@
 .slick-dots {
-  bottom: -3rem;
+  bottom: -2.3rem;
 }
 
 .slick-prev:before, .slick-next:before{
@@ -7,17 +7,10 @@
   top: 30% !important;
 }
 
-.slick-next {
-  right: 0;
-}
-
-.slick-prev {
-  left: 0;
-}
 
 .slick-next, .slick-prev {
   z-index: 2;
-  top: 35%;
+  top: 33%;
   @media (max-width: 700px) {
     display: none !important;
   }

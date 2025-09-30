@@ -1,5 +1,5 @@
 .product-category {
-  --width: clamp(5.8rem, 4.9rem + 2.4vw, 6.4rem);
+  --width: clamp(5rem, 4.9rem + 2.4vw, 6.4rem);
   --selected-color: linear-gradient(180deg,rgba(231, 45, 132, 1) 15%, rgba(134, 24, 75, 1) 86%);
   --unselected-color: linear-gradient(180deg,rgba(244, 244, 244, 1) 15%, rgba(217, 214, 219, 1) 86%);
 

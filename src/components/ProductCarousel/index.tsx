@@ -12,7 +12,7 @@ export default function ProductCarousel({
 }) {
   const getSlidesToShow = () => {
     const windowWidth = window.innerWidth
-    if (windowWidth <= 370) return 1
+    if (windowWidth <= 360) return 1
     if (windowWidth <= 980) return 2
     if (windowWidth <= 1300) return 3
     return 4
@@ -24,13 +24,20 @@ export default function ProductCarousel({
     lazyload: 'ondemand' as const,
     speed: 500,
     slidesToShow: slidesToShow,
-    slidesToScroll: slidesToShow,
+    slidesToScroll: slidesToShow >= 3 ? slidesToShow : 1,
     initialSlide: 0,
     dots: true,
     infinite: true,
     responsive: [
       {
-        breakpoint: 1300,
+        breakpoint: 3800,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+      {
+        breakpoint: 1500,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -40,7 +47,7 @@ export default function ProductCarousel({
         breakpoint: 980,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         },
       },
       {
