@@ -49,229 +49,228 @@ import Desodorante from '../../../assets/products/cosmetics/desodorante.jpg'
 import type { CategoryType } from './categories'
 import type { ProductCardProps } from '../../../components/ProductCard'
 
-interface ProductCategoryData {
-  category: CategoryType;
-  products: ProductCardProps[];
+export interface ProductCategoryData {
+  category: CategoryType
+  products: ProductCardProps[]
 }
 
-export type ProductsByCategoryType = ProductCategoryData[];
+export type ProductsByCategoryType = ProductCategoryData[]
 
 export const productsByCategory: ProductsByCategoryType = [
   {
-    category: "Moda Feminina",
+    category: 'Moda Feminina',
     products: [
       {
         img: Calca,
-        title: "Calça Skinny Jeans – Adágio",
-        description: "97% algodão 3% elastano",
+        title: 'Calça Skinny Jeans – Adágio',
+        description: '97% algodão 3% elastano',
       },
 
       {
         img: CalcaPreta,
-        title: "Calça Skinny Preta – Adágio",
-        description: "97% algodão 3% elastano"
+        title: 'Calça Skinny Preta – Adágio',
+        description: '97% algodão 3% elastano',
       },
       {
         img: Regata,
-        title: "Regata Cotton Decote U – Malwee",
-        description: ""
+        title: 'Regata Cotton Decote U – Malwee',
+        description: '',
       },
       {
         img: Blusa,
-        title: "Blusa com Lycra – Malwee",
-        description: ""
+        title: 'Blusa com Lycra – Malwee',
+        description: '',
       },
       {
         img: CalcaBranca,
-        title: "Calça Skinny Branca – Adágio",
-        description: "97% algodão 3% elastano"
+        title: 'Calça Skinny Branca – Adágio',
+        description: '97% algodão 3% elastano',
       },
       {
         img: Camisola,
-        title: "Camisola",
-        description: "96% poliester 4% elastano"
+        title: 'Camisola',
+        description: '96% poliester 4% elastano',
       },
       {
         img: CalcinhaSutia,
-        title: "Conjunto Calcinha e Sutiã – Pretty Patty",
-        description: "Sem bojo com arco",
+        title: 'Conjunto Calcinha e Sutiã – Pretty Patty',
+        description: 'Sem bojo com arco',
       },
       {
         img: Calcinha,
-        title: "Calçinha – Corpo Colado",
-        description: "96% algodão 4% elastano"
+        title: 'Calçinha – Corpo Colado',
+        description: '96% algodão 4% elastano',
       },
       {
         img: Vestido,
-        title: "Vestido",
-        description: "95% viscose 5% elastano"
+        title: 'Vestido',
+        description: '95% viscose 5% elastano',
       },
-    ]
+    ],
   },
   {
-    category: "Moda Masculina",
+    category: 'Moda Masculina',
     products: [
       {
         img: CamisaGola,
-        title: "Camisa Polo – Ditongo",
-        description: ""
+        title: 'Camisa Polo – Ditongo',
+        description: '',
       },
       {
         img: CamisaGolaCareca,
-        title: "Camisa Gola Careca",
-        description: ""
+        title: 'Camisa Gola Careca',
+        description: '',
       },
       {
         img: Bermuda,
-        title: "Bermuda com Lycra",
-        description: "98% algodão 2% elastano"
+        title: 'Bermuda com Lycra',
+        description: '98% algodão 2% elastano',
       },
       {
         img: CuecaBoxZitton,
-        title: "Cueca Boxer – Zitton",
-        description: "91% poliamida 9% elastano"
+        title: 'Cueca Boxer – Zitton',
+        description: '91% poliamida 9% elastano',
       },
       {
         img: ShortTactel,
-        title: "Short Tactel Esportivo",
-        description: "Malha fria 100% poliéster"
+        title: 'Short Tactel Esportivo',
+        description: 'Malha fria 100% poliéster',
       },
       {
         img: Carteira,
-        title: "Carteira",
-        description: "Courino"
+        title: 'Carteira',
+        description: 'Courino',
       },
-    ]
+    ],
   },
   {
-    category: "Kids",
+    category: 'Kids',
     products: [
       {
         img: ConjuntoFem,
-        title: "Conjunto Feminino – Malwee",
-        description: "Blusa + short 100% algodão"
+        title: 'Conjunto Feminino – Malwee',
+        description: 'Blusa + short 100% algodão',
       },
       {
         img: ConjuntoMasc,
-        title: "Conjunto Masculino – Brandili",
-        description: "Camisa + short 100% algodão"
+        title: 'Conjunto Masculino – Brandili',
+        description: 'Camisa + short 100% algodão',
       },
       {
         img: Bore,
-        title: "Body para bebê – Kadoshinha",
-        description: "100% algodão"
+        title: 'Body para bebê – Kadoshinha',
+        description: '100% algodão',
       },
       {
         img: ShortMoletonFem,
-        title: "Short Feminino Moletom",
-        description: "100% algodão"
+        title: 'Short Feminino Moletom',
+        description: '100% algodão',
       },
       {
         img: CamisaMascMarands,
-        title: "Camisa Masculina – Marands",
-        description: "100% algodão"
+        title: 'Camisa Masculina – Marands',
+        description: '100% algodão',
       },
       {
         img: CamisaMascMarEDia,
-        title: "Camisa Estampada Masculina – Mar e Dia",
-        description: ""
+        title: 'Camisa Estampada Masculina – Mar e Dia',
+        description: '',
       },
       {
         img: CuecaBoxZittonKids,
-        title: "Cueca Boxer Infantil – Zitton",
-        description: ""
+        title: 'Cueca Boxer Infantil – Zitton',
+        description: '',
       },
       {
         img: Boneca,
-        title: "Boneca Bebê",
-        description: ""
+        title: 'Boneca Bebê',
+        description: '',
       },
       {
         img: Brinquedo,
-        title: "Blocos de Montar",
-        description: "Brinquedo educativo"
+        title: 'Blocos de Montar',
+        description: 'Brinquedo educativo',
       },
-    ]
+    ],
   },
   {
-    category: "Casa",
+    category: 'Casa',
     products: [
       {
         img: CapaDeAlmofada,
-        title: "Capa de Almofada",
-        description: "Tecido 100% poliéster"
+        title: 'Capa de Almofada',
+        description: 'Tecido 100% poliéster',
       },
       {
         img: Colcha,
-        title: "Colcha de Cama",
-        description: "100% poliéster"
+        title: 'Colcha de Cama',
+        description: '100% poliéster',
       },
       {
         img: Cortina,
-        title: "Cortina 100% Oxford",
-        description: "Com voil decorativo + suporte para armação"
+        title: 'Cortina 100% Oxford',
+        description: 'Com voil decorativo + suporte para armação',
       },
       {
         img: ConjuntoCozinhaTecidoOxford,
-        title: "Conjunto de Cozinha",
-        description: "Tecido Oxford, material durável e lavável"
+        title: 'Conjunto de Cozinha',
+        description: 'Tecido Oxford, material durável e lavável',
       },
       {
         img: MantaSofa,
-        title: "Manta para Sofá",
-        description: "100% algodão"
+        title: 'Manta para Sofá',
+        description: '100% algodão',
       },
       {
         img: Tapete,
-        title: "Tapete Macarrão",
-        description: "Antiderrapante, 100% poliéster"
+        title: 'Tapete Macarrão',
+        description: 'Antiderrapante, 100% poliéster',
       },
       {
         img: ConjuntoBanheiro,
-        title: "Conjunto de Banheiro",
-        description: "100% algodão"
+        title: 'Conjunto de Banheiro',
+        description: '100% algodão',
       },
       {
         img: ToalhaDeBanho,
-        title: "Toalha de Banho – São Cristóvão",
-        description: "100% algodão"
+        title: 'Toalha de Banho – São Cristóvão',
+        description: '100% algodão',
       },
       {
         img: ToalhaDeRosto,
-        title: "Toalha de Rosto – São Cristóvão",
-        description: "100% algodão"
+        title: 'Toalha de Rosto – São Cristóvão',
+        description: '100% algodão',
       },
       {
         img: JogoDeToalhas,
-        title: "Jogo de Toalhas – São Cristóvão",
-        description: "Toalha de banho + rosto, 100% algodão"
+        title: 'Jogo de Toalhas – São Cristóvão',
+        description: 'Toalha de banho + rosto, 100% algodão',
       },
       {
         img: Travesseiro,
-        title: "Travesseiro – Sonoflex",
-        description: "Fibra siliconizada, anti-alérgico, anti-mofo, anti-ácaro"
+        title: 'Travesseiro – Sonoflex',
+        description: 'Fibra siliconizada, anti-alérgico, anti-mofo, anti-ácaro',
       },
-    ]
+    ],
   },
   {
-    category: "Cosméticos",
+    category: 'Cosméticos',
     products: [
       {
         img: CaixaSabonetes,
-        title: "Caixa de Sabonetes – Natura",
-        description: "Natura Todo Dia"
+        title: 'Caixa de Sabonetes – Natura',
+        description: 'Natura Todo Dia',
       },
       {
         img: Creme,
-        title: "Creme Hidratante Para o Corpo – Natura",
-        description: "Natura Todo Dia"
+        title: 'Creme Hidratante Para o Corpo – Natura',
+        description: 'Natura Todo Dia',
       },
       {
         img: Desodorante,
-        title: "Refil / Desodorante Corporal – Natura",
-        description: "Natura HOMEM"
+        title: 'Refil / Desodorante Corporal – Natura',
+        description: 'Natura HOMEM',
       },
-    ]
-  }
-
+    ],
+  },
 ]
