@@ -1,7 +1,7 @@
 import './style.css'
 import { productsByCategory } from './products'
 import ProductCategory from '../../../components/ProductCategory'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { categories, type CategoryType } from './categories'
 
 import Woman from '../../../assets/categories/fem.png'
@@ -23,10 +23,26 @@ export default function Products() {
   const [selectedCategory, setSelectedCategory] = useState<CategoryType>(
     categories[0]
   )
+  const carouselRef = useRef<HTMLDivElement>(null)
+  const prevCategoryRef = useRef<CategoryType>(categories[0])
 
   const handleCategoryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedCategory(event.target.value as CategoryType)
   }
+
+  // Scroll to carousel when category changes
+  useEffect(() => {
+    if (prevCategoryRef.current !== selectedCategory && carouselRef.current) {
+      const elementTop = carouselRef.current.offsetTop
+      const offset = 100 // Space above the div (in pixels)
+
+      window.scrollTo({
+        top: elementTop - offset,
+        behavior: 'smooth',
+      })
+    }
+    prevCategoryRef.current = selectedCategory
+  }, [selectedCategory])
 
   const currentCategoryData = productsByCategory.find(
     (cat) => cat.category === selectedCategory
@@ -48,7 +64,9 @@ export default function Products() {
           />
         ))}
       </div>
-      <ProductCarousel products={products} />
+      <div ref={carouselRef} style={{ width: '100%' }}>
+        <ProductCarousel products={products} />
+      </div>
     </section>
   )
 }
