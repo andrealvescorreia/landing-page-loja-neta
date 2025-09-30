@@ -34,7 +34,7 @@ export default function Products() {
   const products = currentCategoryData ? currentCategoryData.products : []
 
   return (
-    <form className="products-section">
+    <section className="products-section page-padding">
       <h3>Produtos</h3>
       <p>Explore por categoria</p>
       <div className="categories">
@@ -49,6 +49,6 @@ export default function Products() {
         ))}
       </div>
       <ProductCarousel products={products} />
-    </form>
+    </section>
   )
 }

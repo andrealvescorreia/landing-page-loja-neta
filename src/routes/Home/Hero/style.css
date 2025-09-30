@@ -1,11 +1,4 @@
 .hero {
-  padding-left: min(15rem, 9.5%);
-  padding-right: min(15rem, 9.5%);
-  @media (max-width: 700px) {
-    padding-left: min(5rem, 6%);
-    padding-right: min(5rem, 6%);
-  }
-
   margin-top: clamp(1rem, calc(4.5vw + 1rem), 3rem);
   margin-bottom: 1.5rem;
 

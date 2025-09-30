@@ -1,12 +1,12 @@
 import './style.css'
-import { SecondaryButton } from "../../../components/SecondaryButton";
-import VideoPlayer from "../../../components/VideoPlayer";
+import { SecondaryButton } from '../../../components/SecondaryButton'
+import VideoPlayer from '../../../components/VideoPlayer'
 import Video from '../../../assets/video/store-showcase.mp4'
 import VideoPoster from '../../../assets/video/poster.jpg'
 
 export default function StoreOverview() {
   return (
-    <section className="store-overview">
+    <section className="store-overview page-padding">
       <VideoPlayer
         src={Video}
         poster={VideoPoster}
@@ -19,7 +19,10 @@ export default function StoreOverview() {
       />
       <div>
         <h2>Encontre o que precisa.</h2>
-        <p>Roupas para todas as idades, moda íntima, cosméticos, artigos para casa, cama, mesa, banho, brinquedos e muito mais. </p>
+        <p>
+          Roupas para todas as idades, moda íntima, cosméticos, artigos para
+          casa, cama, mesa, banho, brinquedos e muito mais.{' '}
+        </p>
         <SecondaryButton>Ver Produtos</SecondaryButton>
       </div>
     </section>
