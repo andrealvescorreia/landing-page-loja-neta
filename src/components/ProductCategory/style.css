@@ -1,0 +1,71 @@
+.product-category {
+  --width: clamp(5.8rem, 4.9rem + 2.4vw, 6.4rem);
+  --selected-color: linear-gradient(180deg,rgba(231, 45, 132, 1) 15%, rgba(134, 24, 75, 1) 86%);
+  --unselected-color: linear-gradient(180deg,rgba(244, 244, 244, 1) 15%, rgba(217, 214, 219, 1) 86%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  position: relative;
+  width: var(--width);
+  text-align: center;
+  padding-top:1.5rem;
+}
+.product-category input[type="radio"]:hover {
+  cursor: pointer;
+}
+
+.product-category input[type="radio"]:hover ~ img {
+  filter: none;
+}
+
+
+
+.product-category img {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 3.2rem;
+  width: var(--width);
+  pointer-events: none;
+  filter: grayscale(100%);
+  transition: filter 120ms ease;
+}
+
+
+.product-category input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none; /* For iOS < 15 to remove gradient background */
+ 
+  background: var(--unselected-color);
+  font: inherit;
+  color: black;
+  width: var(--width);
+  height: var(--width);
+  border-radius: 50%;
+
+  display: grid;
+  place-content: center;
+}
+
+.product-category input[type="radio"]::before {
+  content: "";
+  width: var(--width);
+  height: var(--width);
+  border-radius: 50%;
+  transform:  scale(0);
+  transition: 120ms transform ease-in-out;
+  background: var(--selected-color);
+}
+
+.product-category input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+.product-category input[type="radio"]:checked ~ img {
+  filter: none;
+}
+
+.product-category input[type="radio"]:checked ~ label {
+  font-weight: 600;
+}
