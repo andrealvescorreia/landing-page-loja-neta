@@ -6,10 +6,8 @@
   @media (max-width: 700px) {
     grid-template-columns: 1fr;
   }
-  margin: 2rem 0;
+  margin: 4rem 0;
 }
-
-
 
 .store-overview  > :last-child {
   display: flex;
