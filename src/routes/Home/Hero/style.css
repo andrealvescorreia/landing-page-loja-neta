@@ -11,6 +11,12 @@
   }
 }
 
+.family-img {
+  width: 100%;
+  height: auto;
+  justify-self: center;
+}
+
 .hero h1 {
   font-size: clamp(2.1rem, calc(3vw + 1rem), 3rem);
   line-height: 1;

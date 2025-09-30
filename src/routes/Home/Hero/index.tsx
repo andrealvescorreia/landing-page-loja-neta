@@ -39,6 +39,9 @@ export default function HeroSection() {
       <img
         src={FamilyImage}
         alt="Imagem de uma família brasileira sentada em um sofá"
+        className="family-img"
+        width={400}
+        height={400}
       />
     </section>
   )
