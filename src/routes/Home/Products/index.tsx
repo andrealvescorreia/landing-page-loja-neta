@@ -30,16 +30,26 @@ export default function Products() {
     setSelectedCategory(event.target.value as CategoryType)
   }
 
-  // Scroll to carousel when category changes
+  // Scroll to carousel when category changes (desktop only)
   useEffect(() => {
     if (prevCategoryRef.current !== selectedCategory && carouselRef.current) {
-      const elementTop = carouselRef.current.offsetTop
-      const offset = 100 // Space above the div (in pixels)
+      // Only scroll on desktop (min-width: 700px)
+      if (window.innerWidth >= 700) {
+        // Add 250ms delay for better UX
+        const timer = setTimeout(() => {
+          if (carouselRef.current) {
+            const elementTop = carouselRef.current.offsetTop
+            const offset = 100 // Space above the div (in pixels)
 
-      window.scrollTo({
-        top: elementTop - offset,
-        behavior: 'smooth',
-      })
+            window.scrollTo({
+              top: elementTop - offset,
+              behavior: 'smooth',
+            })
+          }
+        }, 250)
+
+        return () => clearTimeout(timer)
+      }
     }
     prevCategoryRef.current = selectedCategory
   }, [selectedCategory])
