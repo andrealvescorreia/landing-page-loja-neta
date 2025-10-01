@@ -1,4 +1,5 @@
 import LogoSlider from '../../components/LogoSlider'
+import About from './About'
 import GiftSection from './GIft'
 import HeroSection from './Hero'
 import StoreOverview from './Overview'
@@ -12,6 +13,7 @@ export default function Home() {
       <StoreOverview />
       <GiftSection />
       <Products />
+      <About />
     </div>
   )
 }
