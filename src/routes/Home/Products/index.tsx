@@ -60,7 +60,7 @@ export default function Products() {
   const products = currentCategoryData ? currentCategoryData.products : []
 
   return (
-    <section className="products-section page-padding">
+    <section className="products-section page-padding reveal-on-scroll">
       <h3>Produtos</h3>
       <p>Explore por categoria</p>
       <div className="categories">

@@ -9,17 +9,6 @@
   --accent-text-color: #CB3D98;
 }
 
-.page-padding {
-  padding-left: min(15rem, 9.5%);
-  padding-right: min(15rem, 9.5%);
-  @media (max-width: 700px) {
-    padding-left: min(4rem, 6%);
-    padding-right: min(4rem, 6%);
-  }
-}
-
-
-
 * {
   margin: 0;
   padding: 0;
@@ -78,4 +67,29 @@ h3 {
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
+}
+
+.page-padding {
+  padding-left: min(15rem, 9.5%);
+  padding-right: min(15rem, 9.5%);
+  @media (max-width: 700px) {
+    padding-left: min(4rem, 6%);
+    padding-right: min(4rem, 6%);
+  }
+}
+
+.hidden {
+  opacity: 0.2;
+  transform: translateX(-30px);
+  filter: blur(1px);
+}
+.show {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hidden {
+    transition: all 1.2s;
+  }
 }

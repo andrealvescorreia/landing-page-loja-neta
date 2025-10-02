@@ -6,7 +6,7 @@ import './style.css'
 
 export default function HeroSection() {
   return (
-    <section className="hero page-padding">
+    <section className="hero page-padding reveal-on-scroll">
       <div>
         <h1>
           Variedade, Qualidade E Atendimento Que Você{' '}

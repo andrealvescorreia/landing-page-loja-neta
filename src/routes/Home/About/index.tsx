@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section className="about-section">
       <div className="bg-image" aria-hidden="true"></div>
-      <div className="about-content page-padding">
+      <div className="about-content page-padding reveal-on-scroll">
         <div>
           <h3>Sobre Nós</h3>
           <p>

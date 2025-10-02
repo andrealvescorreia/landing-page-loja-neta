@@ -6,7 +6,7 @@ import VideoPoster from '../../../assets/video/poster.jpg'
 
 export default function StoreOverview() {
   return (
-    <section className="store-overview page-padding">
+    <section className="store-overview page-padding reveal-on-scroll">
       <VideoPlayer
         src={Video}
         poster={VideoPoster}

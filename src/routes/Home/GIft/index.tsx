@@ -3,7 +3,7 @@ import Gift from '../../../assets/gift.png'
 
 export default function GiftSection() {
   return (
-    <section className="gift-section page-padding">
+    <section className="gift-section page-padding reveal-on-scroll">
       <div className="gift-content">
         <div>
           <h2>Presenteie alguém especial.</h2>
