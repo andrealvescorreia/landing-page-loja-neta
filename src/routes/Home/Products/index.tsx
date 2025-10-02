@@ -32,24 +32,25 @@ export default function Products() {
 
   // Scroll to carousel when category changes (desktop only)
   useEffect(() => {
+    // Only scroll on desktop (min-width: 700px)
+    if (window.innerWidth < 700) return
     if (prevCategoryRef.current !== selectedCategory && carouselRef.current) {
-      // Only scroll on desktop (min-width: 700px)
-      if (window.innerWidth >= 700) {
-        // Add 250ms delay for better UX
-        const timer = setTimeout(() => {
-          if (carouselRef.current) {
-            const elementTop = carouselRef.current.offsetTop
-            const offset = 100 // Space above the div (in pixels)
+      // Add 250ms delay for better UX
+      const timer = setTimeout(() => {
+        if (carouselRef.current) {
+          const rect = carouselRef.current.getBoundingClientRect()
+          const currentScrollY = window.scrollY
+          const elementTop = rect.top + currentScrollY
+          const offset = 100 // Space above the div (in pixels)
 
-            window.scrollTo({
-              top: elementTop - offset,
-              behavior: 'smooth',
-            })
-          }
-        }, 250)
+          window.scrollTo({
+            top: elementTop - offset,
+            behavior: 'smooth',
+          })
+        }
+      }, 250)
 
-        return () => clearTimeout(timer)
-      }
+      return () => clearTimeout(timer)
     }
     prevCategoryRef.current = selectedCategory
   }, [selectedCategory])
@@ -74,7 +75,7 @@ export default function Products() {
           />
         ))}
       </div>
-      <div ref={carouselRef} style={{ width: '100%' }}>
+      <div ref={carouselRef} className="carousel-container">
         <ProductCarousel products={products} />
       </div>
     </section>

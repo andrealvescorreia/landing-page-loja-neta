@@ -11,6 +11,12 @@
   padding-bottom: 0.8rem;
 }
 
+.carousel-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .products-section .categories {
   display: flex;
   justify-content: space-around;
