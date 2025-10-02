@@ -35,19 +35,3 @@
     width: 100%;
   }
 }
-
-.opening-hours {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.opening-hours > * {
-  display: flex;
-  flex-direction: row;
-}
-
-.opening-hours img {
-  width: 1rem;
-  margin-right: 0.3rem;
-}

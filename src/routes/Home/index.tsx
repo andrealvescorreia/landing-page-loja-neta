@@ -5,11 +5,15 @@ import GiftSection from './GIft'
 import HeroSection from './Hero'
 import StoreOverview from './Overview'
 import Products from './Products'
+import Contact from './Contact'
 
 export default function Home() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      entry.target.classList.toggle('show', entry.isIntersecting)
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show')
+      }
+      //entry.target.classList.toggle('show', entry.isIntersecting)
     })
   })
 
@@ -29,6 +33,7 @@ export default function Home() {
       <GiftSection />
       <Products />
       <About />
+      <Contact />
     </div>
   )
 }

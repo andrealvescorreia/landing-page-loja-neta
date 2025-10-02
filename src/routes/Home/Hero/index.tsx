@@ -3,6 +3,7 @@ import FamilyImage from '../../../assets/family.png'
 import Whatsapp from '../../../assets/Whatsapp.svg'
 import Watch from '../../../assets/Watch.svg'
 import './style.css'
+import OpeningHours from '../../../components/OpeningHours'
 
 export default function HeroSection() {
   return (
@@ -25,16 +26,7 @@ export default function HeroSection() {
           <img src={Whatsapp} alt="Ícone do Whatsapp" />
           Falar no Whatsapp
         </AnchorButton>
-        <div className="opening-hours">
-          <span>
-            <img src={Watch} alt="Ícone do Relógio" />
-            <small>SEG à SEX: 8h–12h | 14h–18h</small>
-          </span>
-          <span>
-            <img src={Watch} alt="Ícone do Relógio" />
-            <small>SÁB: 8h–18h</small>
-          </span>
-        </div>
+        <OpeningHours />
       </div>
       <img
         src={FamilyImage}

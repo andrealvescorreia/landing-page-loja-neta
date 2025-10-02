@@ -1,0 +1,18 @@
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 95dvh;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.contact-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 1.5rem;
+}
