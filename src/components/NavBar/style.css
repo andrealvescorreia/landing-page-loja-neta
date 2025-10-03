@@ -13,9 +13,9 @@
   display: flex;
 }
 
-.navbar a {
-  display: flex;
-  align-items: center;
+.navbar button {
+  border: none;
+  background: none;
 }
 
 .navbar img {
@@ -75,11 +75,11 @@
 }
 
 
-.navbar a {
+.navbar ul li button {
   padding: 1rem;
   color: #267AAB;
 }
 
-.navbar a:hover {
+.navbar ul li button:hover {
   text-decoration: underline;
 }
