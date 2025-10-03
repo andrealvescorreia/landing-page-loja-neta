@@ -3,7 +3,7 @@
 
 ![Screenshot da Landing Page](./screenshot.jpg)
 
-This project features a modern, responsive landing page developed for the Neta Variedades physycal store. The layout is designed with a strong focus on user experience (UX), providing intuitive navigation and accessibility on all devices.
+This project features a modern, responsive landing page developed for the Neta Variedades physical store. The layout is designed with a strong focus on user experience (UX), providing intuitive navigation and accessibility on all devices.
 
 The visual design was created in Figma, and the SVG logo was crafted using Inkscape. The page is built with React, CSS, and Vite.
 
