@@ -6,6 +6,7 @@ import HeroSection from './Hero'
 import StoreOverview from './Overview'
 import Products from './Products'
 import Contact from './Contact'
+import Footer from '../../components/Footer'
 
 export default function Home() {
   const observer = new IntersectionObserver((entries) => {
@@ -34,6 +35,7 @@ export default function Home() {
       <Products />
       <About />
       <Contact />
+      <Footer />
     </div>
   )
 }

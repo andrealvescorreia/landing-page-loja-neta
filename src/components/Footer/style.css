@@ -1,0 +1,66 @@
+
+.footer {
+  display: grid;
+  background-color: #F8F8F8;
+  width: 100%;
+  box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.03);
+  grid-template-areas: 
+    "logo info social-links"
+    "developer-credit developer-credit developer-credit";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 14rem 1.5rem;
+
+  @media (max-width: 700px) {
+    grid-template-areas: 
+      "logo"
+      "info"
+      "social-links"
+      "developer-credit ";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 6rem auto;
+    row-gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+}
+
+.logo { 
+  grid-area: logo; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1.7rem;
+  padding-bottom: 1rem;
+}
+
+.logo img {
+  width: 15rem;
+}
+
+.info { 
+  grid-area: info; 
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.7rem;
+  justify-content: center;
+}
+.social-links { 
+  grid-area: social-links; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  @media (min-width: 700px) {
+  margin-left: auto;
+  padding-right: 3rem;
+  }
+}
+.social-links a {
+  display: inline-block;
+  width: 2.2rem;
+}
+
+
+.developer-credit { 
+  grid-area: developer-credit; 
+  text-align: center;
+}
