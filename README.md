@@ -23,4 +23,4 @@ To get started, ensure you have [Node.js](https://nodejs.org/) installed.
 The application will be available at `http://localhost:5173` by default.
 
 ---
-Mady by @andrealvescorreia
+Made by @andrealvescorreia
