@@ -4,7 +4,7 @@ import './style.css'
 import Slider from 'react-slick'
 import type { ProductCardProps } from '../ProductCard'
 import ProductCard from '../ProductCard'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { scrollToElement } from '../../utils/scroll-to-element'
 
 export default function ProductCarousel({
@@ -13,10 +13,18 @@ export default function ProductCarousel({
   products: ProductCardProps[]
 }) {
   const [contactElement, setContactElement] = useState<Element | null>(null)
+  const sliderRef = useRef<Slider>(null)
 
   useEffect(() => {
     setContactElement(document.getElementsByClassName('contact-section')[0])
   }, [])
+
+  // Reset slider to first slide when products change (category change)
+  useEffect(() => {
+    if (sliderRef.current && products.length > 0) {
+      sliderRef.current.slickGoTo(0)
+    }
+  }, [products.length])
 
   const getSlidesToShow = () => {
     const windowWidth = window.innerWidth
@@ -70,7 +78,7 @@ export default function ProductCarousel({
 
   return (
     <div className="slider-container">
-      <Slider {...settings}>
+      <Slider ref={sliderRef} {...settings}>
         {products.map((product, index) => (
           <div key={`${index}-${product.title}`}>
             <ProductCard
