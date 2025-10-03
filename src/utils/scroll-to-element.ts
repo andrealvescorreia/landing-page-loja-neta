@@ -3,7 +3,7 @@ export function scrollToElement(element: Element | null) {
     const navbarHeight = document.querySelector('.navbar')?.clientHeight || 0
     const rect = element.getBoundingClientRect()
     const elementTop = rect.top + window.scrollY
-    const offset = navbarHeight + 20 // navbar height + extra padding
+    const offset = navbarHeight + 7 // navbar height + extra padding
 
     window.scrollTo({
       top: elementTop - offset,
