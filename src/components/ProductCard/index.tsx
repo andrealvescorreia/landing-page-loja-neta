@@ -9,12 +9,14 @@ export interface ProductCardProps {
   img: string
   title: string
   description: string
+  onClickAction?: () => void
 }
 
 export default function ProductCard({
   img,
   title,
   description,
+  onClickAction,
   ...divProps
 }: ProductCardProps & DivProps) {
   const [isImageExpanded, setIsImageExpanded] = useState(false)
@@ -63,7 +65,7 @@ export default function ProductCard({
         </button>
         <p>{title}</p>
         <small>{description}</small>
-        <SecondaryButton>Eu quero</SecondaryButton>
+        <SecondaryButton onClick={onClickAction}>Eu quero</SecondaryButton>
       </div>
 
       {isImageExpanded &&

@@ -3,8 +3,16 @@ import { SecondaryButton } from '../../../components/SecondaryButton'
 import VideoPlayer from '../../../components/VideoPlayer'
 import Video from '../../../assets/video/store-showcase.mp4'
 import VideoPoster from '../../../assets/video/poster.jpg'
+import { useEffect, useState } from 'react'
+import { scrollToElement } from '../../../utils/scroll-to-element'
 
 export default function StoreOverview() {
+  const [productsElement, setProductsElement] = useState<Element | null>(null)
+
+  useEffect(() => {
+    setProductsElement(document.getElementsByClassName('products-section')[0])
+  }, [])
+
   return (
     <section className="store-overview page-padding reveal-on-scroll">
       <VideoPlayer
@@ -23,7 +31,9 @@ export default function StoreOverview() {
           Roupas para todas as idades, moda íntima, cosméticos, artigos para
           casa, cama, mesa, banho, brinquedos e muito mais.{' '}
         </p>
-        <SecondaryButton>Ver Produtos</SecondaryButton>
+        <SecondaryButton onClick={() => scrollToElement(productsElement)}>
+          Ver Produtos
+        </SecondaryButton>
       </div>
     </section>
   )

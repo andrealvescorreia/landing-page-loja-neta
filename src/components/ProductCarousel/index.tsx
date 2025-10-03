@@ -4,12 +4,20 @@ import './style.css'
 import Slider from 'react-slick'
 import type { ProductCardProps } from '../ProductCard'
 import ProductCard from '../ProductCard'
+import { useState, useEffect } from 'react'
+import { scrollToElement } from '../../utils/scroll-to-element'
 
 export default function ProductCarousel({
   products,
 }: {
   products: ProductCardProps[]
 }) {
+  const [contactElement, setContactElement] = useState<Element | null>(null)
+
+  useEffect(() => {
+    setContactElement(document.getElementsByClassName('contact-section')[0])
+  }, [])
+
   const getSlidesToShow = () => {
     const windowWidth = window.innerWidth
     if (windowWidth <= 360) return 1
@@ -69,6 +77,9 @@ export default function ProductCarousel({
               img={product.img}
               title={product.title}
               description={product.description}
+              onClickAction={() => {
+                scrollToElement(contactElement)
+              }}
             />
           </div>
         ))}
