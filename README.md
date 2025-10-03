@@ -1,17 +1,26 @@
-# React + TypeScript + Vite
+# Landing Page - Neta Variedades
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-It has vercel and biomejs configurations. Also includes a vscode task to build and preview.
+![Screenshot da Landing Page](./screenshot.jpg)
 
-Currently, two official plugins are available:
+This project features a modern, responsive landing page developed for the Neta Variedades physycal store. The layout is designed with a strong focus on user experience (UX), providing intuitive navigation and accessibility on all devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The visual design was created in Figma, and the SVG logo was crafted using Inkscape. The page is built with React, CSS, and Vite.
 
-## Clone
-git clone react-template my-new-repo
+### Running the Project Locally
 
-## React Compiler
+To get started, ensure you have [Node.js](https://nodejs.org/) installed.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+1. Install dependencies:
+  ```bash
+  npm install
+  ```
+2. Start the development server:
+  ```bash
+  npm run dev
+  ```
+
+The application will be available at `http://localhost:5173` by default.
+
+---
+Mady by @andrealvescorreia
