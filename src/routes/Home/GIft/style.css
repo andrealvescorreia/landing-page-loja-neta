@@ -3,6 +3,7 @@
     padding-left: 0;
     padding-right: 0;
   }
+  min-height: 90dvh;
 }
 
 .gift-content {
