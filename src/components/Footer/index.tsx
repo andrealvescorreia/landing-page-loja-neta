@@ -1,5 +1,5 @@
 import './style.css'
-import Logo from '../../assets/logo.svg'
+import Logo from '../../assets/Logo.svg'
 import Facebook from '../../assets/facebook.svg'
 import Instagram from '../../assets/instagram.svg'
 
