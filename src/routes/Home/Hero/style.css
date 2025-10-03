@@ -6,7 +6,7 @@
   @media (max-width: 700px) {
     grid-template-columns: 1fr;
   }
-  min-height: 90dvh;
+  min-height: 85vh;
 }
 
 .family-img {

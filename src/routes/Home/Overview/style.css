@@ -6,7 +6,7 @@
   @media (max-width: 700px) {
     grid-template-columns: 1fr;
   }
-  min-height: 80dvh;
+  min-height: 80vh;
 }
 
 .store-overview  > :last-child {
