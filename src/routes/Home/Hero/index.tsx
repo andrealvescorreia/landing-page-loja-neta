@@ -1,7 +1,6 @@
 import { AnchorButton } from '../../../components/AnchorButton'
 import FamilyImage from '../../../assets/family.png'
 import Whatsapp from '../../../assets/Whatsapp.svg'
-import Watch from '../../../assets/Watch.svg'
 import './style.css'
 import OpeningHours from '../../../components/OpeningHours'
 
