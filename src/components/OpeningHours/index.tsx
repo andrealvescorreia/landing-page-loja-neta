@@ -1,4 +1,4 @@
-import Watch from '../../assets/watch.svg'
+import Watch from '../../assets/Watch.svg'
 import './style.css'
 
 export default function OpeningHours() {
