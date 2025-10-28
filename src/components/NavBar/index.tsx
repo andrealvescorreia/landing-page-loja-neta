@@ -21,7 +21,7 @@ export default function NavBar() {
   }, [])
 
   return (
-    <span>
+    <header>
       <nav className="navbar">
         <button
           type="button"
@@ -94,6 +94,6 @@ export default function NavBar() {
         }}
         style={{ display: isOpen ? 'block' : 'none' }}
       />
-    </span>
+    </header>
   )
 }

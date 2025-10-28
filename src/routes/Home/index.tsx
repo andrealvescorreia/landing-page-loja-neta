@@ -27,15 +27,17 @@ export default function Home() {
   }, [observer])
 
   return (
-    <div>
-      <HeroSection />
-      <LogoSlider />
-      <StoreOverview />
-      <GiftSection />
-      <Products />
-      <About />
-      <Contact />
+    <>
+      <main>
+        <HeroSection />
+        <LogoSlider />
+        <StoreOverview />
+        <GiftSection />
+        <Products />
+        <About />
+        <Contact />
+      </main>
       <Footer />
-    </div>
+    </>
   )
 }
