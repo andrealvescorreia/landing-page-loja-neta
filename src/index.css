@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 :root {
-  --main-bg-color: #FFFBFC;
-  --primary-text-color: #4C364B;
-  --secondary-text-color: #806B79;
-  --accent-text-color: #CB3D98;
+  --main-bg-color: #fffbfc;
+  --primary-text-color: #4c364b;
+  --secondary-text-color: #806b79;
+  --accent-text-color: #cb3d98;
 }
 
 * {
@@ -15,7 +15,8 @@
   box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
   font-family: Inter, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -94,6 +95,6 @@ button:hover {
 }
 @media (prefers-reduced-motion: no-preference) {
   .hidden {
-    transition: all 1.2s;
+    transition: transform 1.2s, opacity 1.2s;
   }
 }
